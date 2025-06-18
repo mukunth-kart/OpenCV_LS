@@ -15,9 +15,8 @@ cv2.destroyAllWindows()
 ###RGB without red
 
 img = cv2.imread('D:\Bull.jpg',cv2.IMREAD_COLOR)
-'''###Manual Way
-print(img)
-print(img.shape)
+###Manual Way
+
 m , n, c = img.shape
 for i in range(m):
     for j in range(n):
@@ -25,15 +24,13 @@ for i in range(m):
 cv2.imshow("Red zeroed Out", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-'''
-B, G, R = cv2.split(img)
-R = np.zeros((466,474), dtype=np.uint8)
-img_merge = cv2.merge([B,G,R])
-cv2.imshow("Red out", img_merge)
+
+
+cv2.imshow("Red out", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
+img = cv2.imread('D:\Bull.jpg',cv2.IMREAD_COLOR)
 
 flip_hori = cv2.flip(img, 1)
 flip_vert = cv2.flip(img, 0)
